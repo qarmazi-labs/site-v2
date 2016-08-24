@@ -25,7 +25,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "concurrently \"sails lift --verbose\" \"webpack --watch\"",
+    "build": "webpack"
   },
   "main": "app.js",
   "repository": {
@@ -39,8 +40,10 @@
     "angular-ui-bootstrap": "^2.0.1",
     "angular-ui-router": "^0.3.1",
     "bootstrap": "^4.0.0-alpha.3",
+    "concurrently": "^2.2.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "material-design-icons": "^2.2.3",
     "node-sass": "^3.8.0",
@@ -48,6 +51,7 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "three": "^0.79.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-merge": "^0.14.1"
   }
